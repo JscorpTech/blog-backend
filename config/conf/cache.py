@@ -17,10 +17,10 @@ CACHEOPS_DEFAULTS = {
 }
 CACHEOPS = {
     # !NOTE: api => "you app name"
-    # "api.*": {
-    #     "ops": "all",  # Barcha turdagi so'rovlarni keshga olish
-    #     "timeout": 60 * 5,  # 5 daqiqa davomida saqlash
-    # },
+    "api.*": {
+        "ops": "all",  # Barcha turdagi so'rovlarni keshga olish
+        "timeout": 60 * 5,  # 5 daqiqa davomida saqlash
+    },
 }
 CACHEOPS_DEGRADE_ON_FAILURE = True
 CACHEOPS_ENABLED = env.bool("CACHE_ENABLED", False)
