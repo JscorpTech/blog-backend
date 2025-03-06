@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 16:40+0500\n"
+"POT-Creation-Date: 2025-03-07 01:29+0500\n"
 "PO-Revision-Date: 2024-02-10 22:46+0500\n"
-"Last-Translator:   <admin@gmail.com>\n"
+"Last-Translator: <admin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,37 +19,330 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: config/settings/common.py:148
+#: config/conf/navigation.py:9
+#, fuzzy
+#| msgid "Home"
+msgid "Home page"
+msgstr "Bosh sahifa"
+
+#: config/conf/navigation.py:16
+msgid "Auth"
+msgstr "Auth"
+
+#: config/conf/navigation.py:20
+msgid "Contact"
+msgstr "Contact"
+
+#: config/conf/navigation.py:25
+msgid "Users"
+msgstr "Users"
+
+#: config/conf/navigation.py:30
+msgid "Group"
+msgstr "Group"
+
+#: config/conf/navigation.py:37
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: config/conf/navigation.py:41
+msgid "Project"
+msgstr "Project"
+
+#: config/conf/navigation.py:46
+msgid "Education"
+msgstr "Education"
+
+#: config/conf/navigation.py:51
+msgid "Experience"
+msgstr "Experience"
+
+#: config/conf/navigation.py:58
+msgid "Stack"
+msgstr "Stack"
+
+#: config/conf/navigation.py:62
+msgid "Stacks"
+msgstr "Stacks"
+
+#: config/conf/navigation.py:67
+msgid "Stack Categories"
+msgstr "Stack Categories"
+
+#: config/conf/navigation.py:74
+msgid "Blog"
+msgstr "Blog"
+
+#: config/conf/navigation.py:78
+msgid "Post"
+msgstr "Post"
+
+#: config/conf/navigation.py:83
+msgid "Tag"
+msgstr "Tag"
+
+#: config/conf/navigation.py:88
+msgid "Category"
+msgstr "Category"
+
+#: config/conf/navigation.py:95 config/conf/navigation.py:99
+msgid "Faq"
+msgstr "Faq"
+
+#: config/conf/navigation.py:104
+msgid "Faq Category"
+msgstr "Faq Category"
+
+#: config/settings/common.py:134
 msgid "Russia"
-msgstr ""
+msgstr "Russia"
 
-#: config/settings/common.py:149
+#: config/settings/common.py:135
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: config/settings/common.py:150
+#: config/settings/common.py:136
 msgid "Uzbek"
-msgstr ""
+msgstr "Uzbek"
 
-#: core/http/admin/index.py:20
-msgid "Custom Field"
-msgstr ""
+#: core/apps/accounts/admin/user.py:21
+msgid "Personal info"
+msgstr "Personal info"
 
-#: core/http/tasks/index.py:13
+#: core/apps/accounts/admin/user.py:23
+msgid "Permissions"
+msgstr "Permissions"
+
+#: core/apps/accounts/admin/user.py:35
+msgid "Important dates"
+msgstr "Important dates"
+
+#: core/apps/accounts/choices/user.py:10
+msgid "Superuser"
+msgstr "Superuser"
+
+#: core/apps/accounts/choices/user.py:11
+msgid "Admin"
+msgstr "Admin"
+
+#: core/apps/accounts/choices/user.py:12
+msgid "User"
+msgstr "User"
+
+#: core/apps/accounts/serializers/auth.py:17
+msgid "Phone number already registered."
+msgstr "Phone number already registered."
+
+#: core/apps/accounts/serializers/auth.py:44
+#: core/apps/accounts/serializers/auth.py:55
+msgid "User does not exist"
+msgstr "User does not exist"
+
+#: core/apps/accounts/views/auth.py:60 core/apps/accounts/views/auth.py:92
+#: core/apps/accounts/views/auth.py:116
 #, python-format
-msgid "Sizning Tasdiqlash ko'dingiz: %(code)s"
-msgstr ""
+msgid "Sms %(phone)s raqamiga yuborildi"
+msgstr "Sms %(phone)s raqamiga yuborildi"
 
-#: resources/templates/user/home.html:18
+#: core/apps/accounts/views/auth.py:76
+msgid "Tasdiqlash ko'di qabul qilindi"
+msgstr "Tasdiqlash ko'di qabul qilindi"
+
+#: core/apps/accounts/views/auth.py:153
+msgid "Invalid token"
+msgstr "Invalid token"
+
+#: core/apps/accounts/views/auth.py:157
+msgid "password updated"
+msgstr "password updated"
+
+#: core/apps/accounts/views/auth.py:182
+msgid "Malumotlar yangilandi"
+msgstr "Malumotlar yangilandi"
+
+#: core/apps/accounts/views/auth.py:209
+msgid "invalida password"
+msgstr "invalida password"
+
+#: core/apps/api/models/contact.py:7 core/apps/api/models/post.py:7
+msgid "title"
+msgstr "title"
+
+#: core/apps/api/models/contact.py:8 core/apps/api/models/post.py:8
+msgid "content"
+msgstr "content"
+
+#: core/apps/api/models/contact.py:9
+msgid "phone"
+msgstr "phone"
+
+#: core/apps/api/models/contact.py:24
+msgid "ContactModel"
+msgstr "ContactModel"
+
+#: core/apps/api/models/contact.py:25
+msgid "ContactModels"
+msgstr "ContactModels"
+
+#: core/apps/api/models/faq.py:8
+msgid "question"
+msgstr "question"
+
+#: core/apps/api/models/faq.py:9
+msgid "answer"
+msgstr "answer"
+
+#: core/apps/api/models/faq.py:24
+msgid "FaqModel"
+msgstr "FaqModel"
+
+#: core/apps/api/models/faq.py:25
+msgid "FaqModels"
+msgstr "FaqModels"
+
+#: core/apps/api/models/faq.py:29 core/apps/api/models/portfolio.py:8
+#: core/apps/api/models/portfolio.py:32 core/apps/api/models/portfolio.py:54
+#: core/apps/api/models/portfolio.py:76 core/apps/api/models/portfolio.py:99
+#: core/apps/api/models/post.py:33 core/apps/api/models/post.py:51
+msgid "name"
+msgstr "name"
+
+#: core/apps/api/models/faq.py:42
+msgid "Faq Category Model"
+msgstr "Faq Category Model"
+
+#: core/apps/api/models/faq.py:43
+msgid "Faq Category Models"
+msgstr "Faq Category Models"
+
+#: core/apps/api/models/portfolio.py:9
+msgid "description"
+msgstr "description"
+
+#: core/apps/api/models/portfolio.py:10 core/apps/api/models/portfolio.py:79
+#: core/apps/api/models/post.py:9
+msgid "image"
+msgstr "image"
+
+#: core/apps/api/models/portfolio.py:11
+msgid "source"
+msgstr "source"
+
+#: core/apps/api/models/portfolio.py:12
+msgid "demo"
+msgstr "demo"
+
+#: core/apps/api/models/portfolio.py:27
+msgid "ProjectModel"
+msgstr "ProjectModel"
+
+#: core/apps/api/models/portfolio.py:28
+msgid "ProjectModels"
+msgstr "ProjectModels"
+
+#: core/apps/api/models/portfolio.py:33 core/apps/api/models/portfolio.py:55
+msgid "start date"
+msgstr "start date"
+
+#: core/apps/api/models/portfolio.py:34 core/apps/api/models/portfolio.py:56
+msgid "end date"
+msgstr "end date"
+
+#: core/apps/api/models/portfolio.py:49
+msgid "ExperienceModel"
+msgstr "ExperienceModel"
+
+#: core/apps/api/models/portfolio.py:50
+msgid "ExperienceModels"
+msgstr "ExperienceModels"
+
+#: core/apps/api/models/portfolio.py:71
+msgid "EducationModel"
+msgstr "EducationModel"
+
+#: core/apps/api/models/portfolio.py:72
+msgid "EducationModels"
+msgstr "EducationModels"
+
+#: core/apps/api/models/portfolio.py:77
+msgid "category"
+msgstr "category"
+
+#: core/apps/api/models/portfolio.py:94
+msgid "StackModel"
+msgstr "StackModel"
+
+#: core/apps/api/models/portfolio.py:95
+msgid "StackModels"
+msgstr "StackModels"
+
+#: core/apps/api/models/portfolio.py:112
+msgid "Stack CategoryModel"
+msgstr "Stack CategoryModel"
+
+#: core/apps/api/models/portfolio.py:113
+msgid "Stack CategoryModels"
+msgstr "Stack CategoryModels"
+
+#: core/apps/api/models/post.py:10
+msgid "views"
+msgstr "views"
+
+#: core/apps/api/models/post.py:11
+msgid "tags"
+msgstr "tags"
+
+#: core/apps/api/models/post.py:12
+msgid "categories"
+msgstr "categories"
+
+#: core/apps/api/models/post.py:28
+msgid "PostModel"
+msgstr "PostModel"
+
+#: core/apps/api/models/post.py:29
+msgid "PostModels"
+msgstr "PostModels"
+
+#: core/apps/api/models/post.py:46
+msgid "CategoryModel"
+msgstr "CategoryModel"
+
+#: core/apps/api/models/post.py:47
+msgid "CategoryModels"
+msgstr "CategoryModels"
+
+#: core/apps/api/models/post.py:64
+msgid "TagModel"
+msgstr "TagModel"
+
+#: core/apps/api/models/post.py:65
+msgid "TagModels"
+msgstr "TagModels"
+
+#: core/services/user.py:36
+msgid "Qayta sms yuborish uchun kuting: {}"
+msgstr "Qayta sms yuborish uchun kuting: {}"
+
+#: core/services/user.py:38
+msgid "Serverda xatolik yuz berdi"
+msgstr "Serverda xatolik yuz berdi"
+
+#: resources/templates/admin/index.html:13
+msgid "Django site admin"
+msgstr "Django site admin"
+
+#: resources/templates/admin/index.html:19
+msgid "Django administration"
+msgstr "Django administration"
+
+#: resources/templates/user/home.html:21
 msgid "Django"
-msgstr ""
+msgstr "Django"
 
-#: resources/templates/user/home.html:19
+#: resources/templates/user/home.html:22
 msgid "Assalomu aleykum"
-msgstr ""
-
-#~ msgid "Home"
-#~ msgstr "Bosh sahifa"
+msgstr "Assalomu aleykum"
 
 #~ msgid "Homes"
 #~ msgstr "Bosh sahifa"

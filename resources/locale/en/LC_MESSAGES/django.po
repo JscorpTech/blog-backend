@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 16:40+0500\n"
+"POT-Creation-Date: 2025-03-07 01:29+0500\n"
 "PO-Revision-Date: 2024-02-09 15:09+0500\n"
 "Last-Translator:   <admin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,31 +19,325 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: config/settings/common.py:148
+#: config/conf/navigation.py:9
+msgid "Home page"
+msgstr ""
+
+#: config/conf/navigation.py:16
+msgid "Auth"
+msgstr ""
+
+#: config/conf/navigation.py:20
+msgid "Contact"
+msgstr ""
+
+#: config/conf/navigation.py:25
+msgid "Users"
+msgstr ""
+
+#: config/conf/navigation.py:30
+msgid "Group"
+msgstr ""
+
+#: config/conf/navigation.py:37
+msgid "Portfolio"
+msgstr ""
+
+#: config/conf/navigation.py:41
+msgid "Project"
+msgstr ""
+
+#: config/conf/navigation.py:46
+msgid "Education"
+msgstr ""
+
+#: config/conf/navigation.py:51
+msgid "Experience"
+msgstr ""
+
+#: config/conf/navigation.py:58
+msgid "Stack"
+msgstr ""
+
+#: config/conf/navigation.py:62
+msgid "Stacks"
+msgstr ""
+
+#: config/conf/navigation.py:67
+msgid "Stack Categories"
+msgstr ""
+
+#: config/conf/navigation.py:74
+msgid "Blog"
+msgstr ""
+
+#: config/conf/navigation.py:78
+msgid "Post"
+msgstr ""
+
+#: config/conf/navigation.py:83
+msgid "Tag"
+msgstr ""
+
+#: config/conf/navigation.py:88
+msgid "Category"
+msgstr ""
+
+#: config/conf/navigation.py:95 config/conf/navigation.py:99
+msgid "Faq"
+msgstr ""
+
+#: config/conf/navigation.py:104
+msgid "Faq Category"
+msgstr ""
+
+#: config/settings/common.py:134
 msgid "Russia"
 msgstr ""
 
-#: config/settings/common.py:149
+#: config/settings/common.py:135
 msgid "English"
 msgstr ""
 
-#: config/settings/common.py:150
+#: config/settings/common.py:136
 msgid "Uzbek"
 msgstr ""
 
-#: core/http/admin/index.py:20
-msgid "Custom Field"
+#: core/apps/accounts/admin/user.py:21
+msgid "Personal info"
 msgstr ""
 
-#: core/http/tasks/index.py:13
+#: core/apps/accounts/admin/user.py:23
+msgid "Permissions"
+msgstr ""
+
+#: core/apps/accounts/admin/user.py:35
+msgid "Important dates"
+msgstr ""
+
+#: core/apps/accounts/choices/user.py:10
+msgid "Superuser"
+msgstr ""
+
+#: core/apps/accounts/choices/user.py:11
+msgid "Admin"
+msgstr ""
+
+#: core/apps/accounts/choices/user.py:12
+msgid "User"
+msgstr ""
+
+#: core/apps/accounts/serializers/auth.py:17
+msgid "Phone number already registered."
+msgstr ""
+
+#: core/apps/accounts/serializers/auth.py:44
+#: core/apps/accounts/serializers/auth.py:55
+msgid "User does not exist"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:60 core/apps/accounts/views/auth.py:92
+#: core/apps/accounts/views/auth.py:116
 #, python-format
-msgid "Sizning Tasdiqlash ko'dingiz: %(code)s"
+msgid "Sms %(phone)s raqamiga yuborildi"
 msgstr ""
 
-#: resources/templates/user/home.html:18
+#: core/apps/accounts/views/auth.py:76
+msgid "Tasdiqlash ko'di qabul qilindi"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:153
+msgid "Invalid token"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:157
+msgid "password updated"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:182
+msgid "Malumotlar yangilandi"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:209
+msgid "invalida password"
+msgstr ""
+
+#: core/apps/api/models/contact.py:7 core/apps/api/models/post.py:7
+msgid "title"
+msgstr ""
+
+#: core/apps/api/models/contact.py:8 core/apps/api/models/post.py:8
+msgid "content"
+msgstr ""
+
+#: core/apps/api/models/contact.py:9
+msgid "phone"
+msgstr ""
+
+#: core/apps/api/models/contact.py:24
+msgid "ContactModel"
+msgstr ""
+
+#: core/apps/api/models/contact.py:25
+msgid "ContactModels"
+msgstr ""
+
+#: core/apps/api/models/faq.py:8
+msgid "question"
+msgstr ""
+
+#: core/apps/api/models/faq.py:9
+msgid "answer"
+msgstr ""
+
+#: core/apps/api/models/faq.py:24
+msgid "FaqModel"
+msgstr ""
+
+#: core/apps/api/models/faq.py:25
+msgid "FaqModels"
+msgstr ""
+
+#: core/apps/api/models/faq.py:29 core/apps/api/models/portfolio.py:8
+#: core/apps/api/models/portfolio.py:32 core/apps/api/models/portfolio.py:54
+#: core/apps/api/models/portfolio.py:76 core/apps/api/models/portfolio.py:99
+#: core/apps/api/models/post.py:33 core/apps/api/models/post.py:51
+msgid "name"
+msgstr ""
+
+#: core/apps/api/models/faq.py:42
+msgid "Faq Category Model"
+msgstr ""
+
+#: core/apps/api/models/faq.py:43
+msgid "Faq Category Models"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:9
+msgid "description"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:10 core/apps/api/models/portfolio.py:79
+#: core/apps/api/models/post.py:9
+msgid "image"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:11
+msgid "source"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:12
+msgid "demo"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:27
+msgid "ProjectModel"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:28
+msgid "ProjectModels"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:33 core/apps/api/models/portfolio.py:55
+msgid "start date"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:34 core/apps/api/models/portfolio.py:56
+msgid "end date"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:49
+msgid "ExperienceModel"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:50
+msgid "ExperienceModels"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:71
+msgid "EducationModel"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:72
+msgid "EducationModels"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:77
+msgid "category"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:94
+msgid "StackModel"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:95
+msgid "StackModels"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:112
+msgid "Stack CategoryModel"
+msgstr ""
+
+#: core/apps/api/models/portfolio.py:113
+msgid "Stack CategoryModels"
+msgstr ""
+
+#: core/apps/api/models/post.py:10
+msgid "views"
+msgstr ""
+
+#: core/apps/api/models/post.py:11
+msgid "tags"
+msgstr ""
+
+#: core/apps/api/models/post.py:12
+msgid "categories"
+msgstr ""
+
+#: core/apps/api/models/post.py:28
+msgid "PostModel"
+msgstr ""
+
+#: core/apps/api/models/post.py:29
+msgid "PostModels"
+msgstr ""
+
+#: core/apps/api/models/post.py:46
+msgid "CategoryModel"
+msgstr ""
+
+#: core/apps/api/models/post.py:47
+msgid "CategoryModels"
+msgstr ""
+
+#: core/apps/api/models/post.py:64
+msgid "TagModel"
+msgstr ""
+
+#: core/apps/api/models/post.py:65
+msgid "TagModels"
+msgstr ""
+
+#: core/services/user.py:36
+msgid "Qayta sms yuborish uchun kuting: {}"
+msgstr ""
+
+#: core/services/user.py:38
+msgid "Serverda xatolik yuz berdi"
+msgstr ""
+
+#: resources/templates/admin/index.html:13
+msgid "Django site admin"
+msgstr ""
+
+#: resources/templates/admin/index.html:19
+msgid "Django administration"
+msgstr ""
+
+#: resources/templates/user/home.html:21
 msgid "Django"
 msgstr ""
 
-#: resources/templates/user/home.html:19
+#: resources/templates/user/home.html:22
 msgid "Assalomu aleykum"
 msgstr ""
