@@ -66,7 +66,7 @@ PAGES = [
             {
                 "title": _("Stack Categories"),
                 "icon": "category",
-                "link": reverse_lazy("admin:api_categorymodel_changelist"),
+                "link": reverse_lazy("admin:api_stackcategorymodel_changelist"),
             }
         ]
     },
