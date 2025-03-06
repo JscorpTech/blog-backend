@@ -1,0 +1,13 @@
+FROM python:3.13-alpine
+
+ENV PYTHONPYCACHEPREFIX=/dev/null
+
+RUN apk update && apk add git gettext
+
+WORKDIR /code
+
+COPY requirements.txt /code/requirements.txt
+
+RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
+
+CMD ["sh", "./entrypoint.sh"]
