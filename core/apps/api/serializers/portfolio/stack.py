@@ -8,7 +8,8 @@ class BaseStackSerializer(serializers.ModelSerializer):
         model = StackModel
         fields = [
             "id",
-            "name"
+            "name",
+            "image",
         ]
 
 

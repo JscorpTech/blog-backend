@@ -1,15 +1,18 @@
-from rest_framework import serializers
+from django_core.serializers import AbstractTranslatedSerializer
 
+from core.apps.shared.serializers import ListMediaSerializer
 from ...models import ProjectModel
 
 
-class BaseProjectSerializer(serializers.ModelSerializer):
+class BaseProjectSerializer(AbstractTranslatedSerializer):
+    images = ListMediaSerializer(many=True)
+
     class Meta:
         model = ProjectModel
         fields = [
             "id",
             "name",
-            "image",
+            "images",
             "desc",
             "source",
             "demo",

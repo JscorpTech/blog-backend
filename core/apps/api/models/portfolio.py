@@ -1,13 +1,17 @@
 import datetime
 
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django_core.models import AbstractBaseModel
 
+from core.apps.shared.models import MediaModel
+
+
 class ProjectModel(AbstractBaseModel):
     name = models.CharField(_("name"), max_length=255)
     desc = models.CharField(_("description"), max_length=255)
-    image = models.ImageField(upload_to="project/", verbose_name=_("image"))
+    images = models.ManyToManyField(MediaModel, verbose_name=_("images"))
     source = models.URLField(verbose_name=_("source"), null=True, blank=True)
     demo = models.URLField(verbose_name=_("demo"), null=True, blank=True)
 
@@ -30,6 +34,10 @@ class ProjectModel(AbstractBaseModel):
 
 class ExperienceModel(AbstractBaseModel):
     name = models.CharField(_("name"), max_length=255)
+    comments = ArrayField(base_field=models.CharField(verbose_name=_("comments"), max_length=255),
+                          verbose_name=_("comments"), null=True, blank=True)
+    images = models.ManyToManyField(MediaModel, verbose_name=_("images"))
+    role = models.CharField(verbose_name=_("role"), max_length=255)
     start_date = models.DateField(verbose_name=_("start date"))
     end_date = models.DateField(verbose_name=_("end date"), null=True, blank=True)
 
