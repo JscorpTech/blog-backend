@@ -25,7 +25,7 @@ class PostView(BaseViewSetMixin, ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
 
     def get_queryset(self):
-        return PostModel.objects.prefetch_related("tags").prefetch_related("categories").all()
+        return PostModel.objects.prefetch_related("tags").prefetch_related("categories").order_by("-created_at").all()
 
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()

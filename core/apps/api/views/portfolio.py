@@ -27,7 +27,7 @@ from ..serializers.portfolio import (
 
 @extend_schema(tags=["project"])
 class ProjectView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = ProjectModel.objects.all()
+    queryset = ProjectModel.objects.order_by("-id")
     serializer_class = ListProjectSerializer
     permission_classes = [AllowAny]
 
@@ -41,7 +41,7 @@ class ProjectView(BaseViewSetMixin, ReadOnlyModelViewSet):
 
 @extend_schema(tags=["experience"])
 class ExperienceView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = ExperienceModel.objects.all()
+    queryset = ExperienceModel.objects.order_by("-start_date")
     serializer_class = ListExperienceSerializer
     permission_classes = [AllowAny]
 
@@ -55,7 +55,7 @@ class ExperienceView(BaseViewSetMixin, ReadOnlyModelViewSet):
 
 @extend_schema(tags=["education"])
 class EducationView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = EducationModel.objects.all()
+    queryset = EducationModel.objects.order_by("-start_date")
     serializer_class = ListEducationSerializer
     permission_classes = [AllowAny]
 
