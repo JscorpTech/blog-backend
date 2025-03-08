@@ -1,11 +1,9 @@
 from config.env import env
 
 APPS = [
-    
+    "adminsortable2",
     "cacheops",
-    
     "django_ckeditor_5",
-    
     "drf_spectacular",
     "rest_framework",
     "corsheaders",

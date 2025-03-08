@@ -1,5 +1,3 @@
-from typing import Any
-
 from django_core.mixins import BaseViewSetMixin
 from drf_spectacular.utils import extend_schema
 from rest_framework.permissions import AllowAny
@@ -27,7 +25,7 @@ from ..serializers.portfolio import (
 
 @extend_schema(tags=["project"])
 class ProjectView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = ProjectModel.objects.order_by("-id")
+    queryset = ProjectModel.objects.order_by("position")
     serializer_class = ListProjectSerializer
     permission_classes = [AllowAny]
 
@@ -41,7 +39,7 @@ class ProjectView(BaseViewSetMixin, ReadOnlyModelViewSet):
 
 @extend_schema(tags=["experience"])
 class ExperienceView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = ExperienceModel.objects.order_by("-start_date")
+    queryset = ExperienceModel.objects.order_by("position")
     serializer_class = ListExperienceSerializer
     permission_classes = [AllowAny]
 
@@ -55,7 +53,7 @@ class ExperienceView(BaseViewSetMixin, ReadOnlyModelViewSet):
 
 @extend_schema(tags=["education"])
 class EducationView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = EducationModel.objects.order_by("-start_date")
+    queryset = EducationModel.objects.order_by("position")
     serializer_class = ListEducationSerializer
     permission_classes = [AllowAny]
 
@@ -69,7 +67,7 @@ class EducationView(BaseViewSetMixin, ReadOnlyModelViewSet):
 
 @extend_schema(tags=["stack"])
 class StackView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = StackModel.objects.all()
+    queryset = StackModel.objects.order_by("position")
     serializer_class = ListStackSerializer
     permission_classes = [AllowAny]
 
@@ -83,7 +81,7 @@ class StackView(BaseViewSetMixin, ReadOnlyModelViewSet):
 
 @extend_schema(tags=["stack category"])
 class StackCategoryView(BaseViewSetMixin, ReadOnlyModelViewSet):
-    queryset = StackCategoryModel.objects.all()
+    queryset = StackCategoryModel.objects.order_by("position")
     serializer_class = ListStackCategorySerializer
     permission_classes = [AllowAny]
 

@@ -10,6 +10,7 @@ class PostModel(AbstractBaseModel):
     views = models.IntegerField(default=0, verbose_name=_("views"))
     tags = models.ManyToManyField("TagModel", verbose_name=_("tags"))
     categories = models.ManyToManyField("CategoryModel", verbose_name=_("categories"))
+    position = models.PositiveIntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -24,6 +25,9 @@ class PostModel(AbstractBaseModel):
         )
 
     class Meta:
+        ordering = [
+            "position"
+        ]
         db_table = "post"
         verbose_name = _("PostModel")
         verbose_name_plural = _("PostModels")

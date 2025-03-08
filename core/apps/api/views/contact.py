@@ -1,5 +1,3 @@
-from typing import Any
-
 from django_core.mixins import BaseViewSetMixin
 from drf_spectacular.utils import extend_schema
 from rest_framework.permissions import AllowAny

@@ -14,6 +14,11 @@ class ProjectModel(AbstractBaseModel):
     images = models.ManyToManyField(MediaModel, verbose_name=_("images"))
     source = models.URLField(verbose_name=_("source"), null=True, blank=True)
     demo = models.URLField(verbose_name=_("demo"), null=True, blank=True)
+    position = models.PositiveIntegerField(
+        default=0,
+        null=True,
+        blank=True,
+    )
 
     def __str__(self):
         return self.name
@@ -27,6 +32,9 @@ class ProjectModel(AbstractBaseModel):
         )
 
     class Meta:
+        ordering = [
+            "position",
+        ]
         db_table = "project"
         verbose_name = _("ProjectModel")
         verbose_name_plural = _("ProjectModels")
@@ -34,12 +42,17 @@ class ProjectModel(AbstractBaseModel):
 
 class ExperienceModel(AbstractBaseModel):
     name = models.CharField(_("name"), max_length=255)
-    comments = ArrayField(base_field=models.CharField(verbose_name=_("comments"), max_length=255),
-                          verbose_name=_("comments"), null=True, blank=True)
+    comments = ArrayField(
+        base_field=models.CharField(verbose_name=_("comments"), max_length=255),
+        verbose_name=_("comments"),
+        null=True,
+        blank=True,
+    )
     images = models.ManyToManyField(MediaModel, verbose_name=_("images"))
     role = models.CharField(verbose_name=_("role"), max_length=255)
     start_date = models.DateField(verbose_name=_("start date"))
     end_date = models.DateField(verbose_name=_("end date"), null=True, blank=True)
+    position = models.PositiveIntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -53,6 +66,7 @@ class ExperienceModel(AbstractBaseModel):
         )
 
     class Meta:
+        ordering = ["position"]
         db_table = "experience"
         verbose_name = _("ExperienceModel")
         verbose_name_plural = _("ExperienceModels")
@@ -62,6 +76,7 @@ class EducationModel(AbstractBaseModel):
     name = models.CharField(_("name"), max_length=255)
     start_date = models.DateField(verbose_name=_("start date"))
     end_date = models.DateField(verbose_name=_("end date"), null=True, blank=True)
+    position = models.PositiveIntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -75,6 +90,7 @@ class EducationModel(AbstractBaseModel):
         )
 
     class Meta:
+        ordering = ["position"]
         db_table = "education"
         verbose_name = _("EducationModel")
         verbose_name_plural = _("EducationModels")
@@ -82,9 +98,11 @@ class EducationModel(AbstractBaseModel):
 
 class StackModel(AbstractBaseModel):
     name = models.CharField(_("name"), max_length=255)
-    category = models.ForeignKey("StackCategoryModel", verbose_name=_("category"), related_name="stacks",
-                                 on_delete=models.CASCADE)
+    category = models.ForeignKey(
+        "StackCategoryModel", verbose_name=_("category"), related_name="stacks", on_delete=models.CASCADE
+    )
     image = models.ImageField(upload_to="stack/", verbose_name=_("image"))
+    position = models.PositiveIntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -98,6 +116,7 @@ class StackModel(AbstractBaseModel):
         )
 
     class Meta:
+        ordering = ["position"]
         db_table = "stack"
         verbose_name = _("StackModel")
         verbose_name_plural = _("StackModels")
@@ -105,6 +124,7 @@ class StackModel(AbstractBaseModel):
 
 class StackCategoryModel(AbstractBaseModel):
     name = models.CharField(_("name"), max_length=255)
+    position = models.PositiveIntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -116,6 +136,7 @@ class StackCategoryModel(AbstractBaseModel):
         )
 
     class Meta:
+        ordering = ["position"]
         db_table = "stackcategory"
         verbose_name = _("Stack CategoryModel")
         verbose_name_plural = _("Stack CategoryModels")

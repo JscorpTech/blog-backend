@@ -1,5 +1,3 @@
-from typing import Any
-
 from django_core.mixins import BaseViewSetMixin
 from drf_spectacular.utils import extend_schema
 from rest_framework.permissions import AllowAny
@@ -25,7 +23,7 @@ class PostView(BaseViewSetMixin, ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
 
     def get_queryset(self):
-        return PostModel.objects.prefetch_related("tags").prefetch_related("categories").order_by("-created_at").all()
+        return PostModel.objects.prefetch_related("tags").prefetch_related("categories").order_by("position").all()
 
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
