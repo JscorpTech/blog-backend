@@ -8,7 +8,7 @@ from ..models import CategoryModel, PostModel, TagModel
 
 
 @admin.register(PostModel)
-class PostAdmin(SortableAdminMixin, TabbedTranslationAdmin):
+class PostAdmin(SortableAdminMixin, ModelAdmin, TabbedTranslationAdmin):
     action_form = ActionForm
     search_fields = (
         "title",
