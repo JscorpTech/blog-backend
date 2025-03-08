@@ -5,11 +5,12 @@ from django_core.models import AbstractBaseModel
 
 class PostModel(AbstractBaseModel):
     title = models.CharField(max_length=255, verbose_name=_("title"))
+    desc = models.CharField(max_length=1000, verbose_name=_("desc"))
     content = models.TextField(verbose_name=_("content"))
     image = models.ImageField(upload_to="post/", verbose_name=_("image"))
     views = models.IntegerField(default=0, verbose_name=_("views"))
-    tags = models.ManyToManyField("TagModel", verbose_name=_("tags"))
-    categories = models.ManyToManyField("CategoryModel", verbose_name=_("categories"))
+    tags = models.ManyToManyField("TagModel", verbose_name=_("tags"), blank=True)
+    categories = models.ManyToManyField("CategoryModel", verbose_name=_("categories"), blank=True)
     position = models.PositiveIntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
@@ -25,9 +26,7 @@ class PostModel(AbstractBaseModel):
         )
 
     class Meta:
-        ordering = [
-            "position"
-        ]
+        ordering = ["position"]
         db_table = "post"
         verbose_name = _("PostModel")
         verbose_name_plural = _("PostModels")

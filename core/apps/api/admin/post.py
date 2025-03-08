@@ -5,11 +5,14 @@ from unfold.decorators import display
 from adminsortable2.admin import SortableAdminMixin
 from unfold.forms import ActionForm
 from ..models import CategoryModel, PostModel, TagModel
+from unfold.contrib.forms.widgets import WysiwygWidget
+from django.db import models
 
 
 @admin.register(PostModel)
 class PostAdmin(SortableAdminMixin, ModelAdmin, TabbedTranslationAdmin):
     action_form = ActionForm
+    formfield_overrides = {models.TextField: {"widget": WysiwygWidget}}
     search_fields = (
         "title",
         "content",

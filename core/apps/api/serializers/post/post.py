@@ -16,7 +16,7 @@ class BasePostSerializer(serializers.ModelSerializer):
             "title",
             "views",
             "image",
-            "content",
+            "desc",
             "tags",
             "categories",
             "created_at",
@@ -29,7 +29,10 @@ class ListPostSerializer(BasePostSerializer):
 
 
 class RetrievePostSerializer(BasePostSerializer):
-    class Meta(BasePostSerializer.Meta): ...
+    class Meta(BasePostSerializer.Meta):
+        fields = BasePostSerializer.Meta.fields + [
+            "content",
+        ]
 
 
 class CreatePostSerializer(BasePostSerializer):
