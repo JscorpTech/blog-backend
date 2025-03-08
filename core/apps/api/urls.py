@@ -1,7 +1,16 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import FaqView, CategoryView, TagView, PostView, StackView, ExperienceView, EducationView, ProjectView, \
-    StackCategoryView, ContactView
+from .views import (
+    FaqView,
+    CategoryView,
+    TagView,
+    PostView,
+    ExperienceView,
+    EducationView,
+    ProjectView,
+    StackCategoryView,
+    ContactView,
+)
 
 router = DefaultRouter()
 router.register("faq", FaqView, basename="faq")

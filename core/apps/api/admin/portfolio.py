@@ -13,7 +13,7 @@ class ProjectAdmin(SortableAdminMixin, ModelAdmin, TabbedTranslationAdmin):
     action_form = ActionForm
     search_fields = ["name", "id"]
     autocomplete_fields = ("images",)
-    list_display = ("id", "source", "demo", "__str__", "created_at", "updated_at", "position")
+    list_display = ("id", "source", "demo", "__str__", "created_at", "updated_at")
 
 
 @admin.register(ExperienceModel)
