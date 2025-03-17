@@ -96,13 +96,12 @@ WSGI_APPLICATION = "config.wsgi.application"
 # fmt: on
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.{}".format(validator)
-    } for validator in [
+    {"NAME": "django.contrib.auth.password_validation.{}".format(validator)}
+    for validator in [
         "UserAttributeSimilarityValidator",
         "MinimumLengthValidator",
         "CommonPasswordValidator",
-        "NumericPasswordValidator"
+        "NumericPasswordValidator",
     ]
 ]
 
@@ -138,8 +137,6 @@ LANGUAGES = (
 LOCALE_PATHS = [os.path.join(BASE_DIR, "resources/locale")]
 
 
-
-
 LANGUAGE_CODE = "uz"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "resources/media")  # Media files
@@ -159,7 +156,6 @@ MODELTRANSLATION_LANGUAGES = ("uz", "ru", "en")
 MODELTRANSLATION_DEFAULT_LANGUAGE = "uz"
 
 
-
 JST_LANGUAGES = [
     {
         "code": "uz",
@@ -173,5 +169,5 @@ JST_LANGUAGES = [
     {
         "code": "ru",
         "name": "Russia",
-    }
+    },
 ]
