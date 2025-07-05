@@ -34,7 +34,7 @@ django-cacheops~=7.1
 django-silk
 
 # !NOTE: on-server
-# gunicorn
+gunicorn
 
 
 django-storages
